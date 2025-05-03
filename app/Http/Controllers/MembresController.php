@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Presence;
 use Illuminate\Http\Request;
 
 class MembresController extends Controller
@@ -11,7 +12,8 @@ class MembresController extends Controller
      */
     public function index()
     {
-        //
+        $membres = Presence::get();
+        return view('pages.membres.index', compact('membres'));
     }
 
     /**

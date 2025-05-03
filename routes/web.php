@@ -48,13 +48,13 @@ Route::post('/profil', [UserController::class, 'updateProfile'])->name('profil.u
 Route::get('/activity', [ActivityController::class, 'index'])->name('activity.index');
 
 Route::get('/participants', [ParticipantsController::class, 'index'])->name('participants.index');
-Route::post('/participants/{evenement}', [ParticipantsController::class, 'store'])->name('participants.store');
+Route::post('/participants/submit', [ParticipantsController::class, 'store'])->name('participation.add');
 
 Route::get('/membres', [MembresController::class, 'index'])->name('membres.index');
 
 
-Route::get('/users', [ParticipantsController::class, 'index'])->name('users.index');
-Route::post('/users', [ParticipantsController::class, 'update'])->name('users.update');
+Route::get('/users', [UserController::class , 'index'])->name('users.index');
+Route::post('/users', [UserController::class, 'update'])->name('users.update');
 
 
 Auth::routes();
