@@ -16,8 +16,7 @@
     <div class="container-xl">
         <div class="row row-deck row-cards">
 
-            <!-- Commandes en cours / en Attentes -->
-            <div class="col-12">
+            {{-- <div class="col-12">
                 <div class="card">
                     <div class="card-header">
                         <h3 class="card-title">Commandes en cours / en Attentes</h3>
@@ -55,83 +54,12 @@
                                   <th>Actions</th>
                               </tr>
                           </thead>
-                          <tbody>
-                              {{-- @foreach($orders as $order)
-                              <tr>
-                                  <td><input class="form-check-input m-0 align-middle table-selectable-check" type="checkbox" aria-label="Select invoice"></td>
-                                  <td><span class="text-secondary">{{ $order->id }}</span></td>
-                                  <td><a href="{{ route('orders.show', $order->id) }}" class="text-reset" tabindex="-1">{{ $order->reference_commande }}</a></td>
-                                  <td>{{ $order->user->name ?? 'Client inconnu' }}</td>
-                                  <td>{{ $order->numero_destinataire }}</td>
-                                  <td>{{ \Carbon\Carbon::parse($order->date)->format('d M Y') }}</td>
-
-                                  <td><span class="badge bg-{{ $order->status_orders == 'En cours' ? 'success' : ($order->status_orders == 'En attente' ? 'warning' : 'danger') }} me-1"></span> {{ $order->status_orders }}</td>
-                                  <td>{{ $order->montant }} €</td>
-                                  <td>{{ $order->mode_payment }}</td>
-                                  <td class="text-end">
-                                      <span class="dropdown">
-                                          <button class="btn dropdown-toggle align-text-top" data-bs-boundary="viewport" data-bs-toggle="dropdown">Actions</button>
-                                          <div class="dropdown-menu dropdown-menu-end">
-                                            <!-- Voir les détails de la commande -->
-                                            <a class="dropdown-item" href="{{ route('orders.show', $order->id) }}">Voir</a>
-                                            
-                                            <!-- Affecter un livreur -->
-                                            <form action="{{ route('orders.assign', $order->id) }}" method="POST">
-                                                @csrf
-                                                <a class="dropdown-item" href="javascript:void(0)" data-bs-toggle="modal" data-bs-target="#assignLivreurModal{{ $order->id }}">
-                                                    Affecter un Livreur
-                                                </a>
-                                            </form>
-                                            
-                                            <!-- Annuler la commande -->
-                                            <form action="{{ route('orders.cancel', $order->id) }}" method="POST">
-                                                @csrf
-                                                @method('PATCH') <!-- Méthode PATCH pour mise à jour -->
-                                                <a class="dropdown-item" href="javascript:void(0)" onclick="this.closest('form').submit();">
-                                                    Annuler
-                                                </a>
-                                            </form>
-                                        </div>
-                                      </span>
-                                  </td>
-
-                                  <!-- Modal pour affecter un livreur -->
-                                    <div class="modal fade" id="assignLivreurModal{{ $order->id }}" tabindex="-1" aria-labelledby="assignLivreurModalLabel{{ $order->id }}" aria-hidden="true">
-                                        <div class="modal-dialog">
-                                            <div class="modal-content">
-                                                <div class="modal-header">
-                                                    <h5 class="modal-title" id="assignLivreurModalLabel{{ $order->id }}">Affecter un Livreur</h5>
-                                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                                                </div>
-                                                <div class="modal-body">
-                                                    <form action="{{ route('orders.assign', $order->id) }}" method="POST">
-                                                        @csrf
-                                                        <div class="mb-3">
-                                                            <label for="livreur_id" class="form-label">Sélectionner un Livreur</label>
-                                                            <select name="livreur_id" id="livreur_id" class="form-control" required>
-                                                                <option value="">-- Choisir un livreur --</option>
-                                                                @foreach($livreurs as $livreur)
-                                                                    <option value="{{ $livreur->id }}">{{ $livreur->nom }} {{ $livreur->prenoms }}</option>
-                                                                @endforeach
-                                                            </select>
-                                                        </div>
-                                                        <div class="modal-footer">
-                                                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fermer</button>
-                                                            <button type="submit" class="btn btn-primary">Affecter</button>
-                                                        </div>
-                                                    </form>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                              </tr>
-                              @endforeach --}}
-                          </tbody>
+                          
                       </table>
                   </div>
                   
                 </div>
-            </div>
+            </div> --}}
 
             <!-- Notifications -->
             {{-- <div class="col-6">
