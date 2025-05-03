@@ -42,7 +42,7 @@
         </div>
         <div class="card card-md">
           <div class="card-body">
-            <h2 class="h2 text-center mb-4">ADMINISTRATION ELBARA EXPRESS</h2>
+            <h2 class="h2 text-center mb-4 text-uppercase">ADMINISTRATION Eglise méthodiste la source du salut</h2>
             <form action="{{ route('login') }}" method="POST" autocomplete="off" novalidate="">
               @csrf
               <div class="mb-3">

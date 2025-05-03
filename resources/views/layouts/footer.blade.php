@@ -6,7 +6,7 @@
           <ul class="list-inline list-inline-dots mb-0">
             <li class="list-inline-item">
               Copyright &copy; 2025
-              <a href="index.htm" class="link-secondary">Elbara Express</a>. Tous droits réservés.
+              <a href="index.htm" class="link-secondary">Eglise méthodiste la source du salut</a>. Tous droits réservés.
             </li>
             
           </ul>
