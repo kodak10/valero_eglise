@@ -84,8 +84,13 @@ class ParticipationController extends Controller
             'cookie_token' => $cookieToken,
         ]);
 
-        return redirect()->back()
-            ->withCookie(cookie()->forever('participation_token', $cookieToken))
-            ->with('success', 'Présence enregistrée avec succès.');
+        // return redirect()->back()
+        //     ->withCookie(cookie()->forever('participation_token', $cookieToken))
+        //     ->with('success', 'Présence enregistrée avec succès.');
+
+        return response()
+    ->view('pages.participation.success', ['evenement' => $evenement])
+    ->withCookie(cookie()->forever('participation_token', $cookieToken));
+
     }
 }
