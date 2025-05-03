@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>ELBARA | ADMINISTRATION</title>
+    <title>ADMINISTRATION</title>
     
     <link href="{{ asset('assets/libs/tom-select/dist/css/tom-select.bootstrap5.min.css') }} " rel="stylesheet">
 
@@ -36,7 +36,7 @@
       <div class="container container-tight py-4">
         <div class="text-center mb-4">
           <!-- BEGIN NAVBAR LOGO -->
-          <img src="{{ asset('assets/icon.png') }}" style="height: 150px" alt="">
+          <img src="{{ asset('assets/icon.jpeg') }}" style="height: 150px" alt="">
           
           <!-- END NAVBAR LOGO -->
         </div>
@@ -47,7 +47,7 @@
               @csrf
               <div class="mb-3">
                   <label class="form-label">Email</label>
-                  <input type="email" value="superadmin@example.com" name="email" class="form-control" placeholder="nom@elbaraexpress.com" value="{{ old('email') }}" required autocomplete="email" autofocus>
+                  <input type="email" value="superadmin@example.com" name="email" class="form-control" placeholder="nom@gmail.com" value="{{ old('email') }}" required autocomplete="email" autofocus>
                   @error('email')
                       <div class="text-danger">{{ $message }}</div>
                   @enderror

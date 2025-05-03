@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Presence;
 use Illuminate\Http\Request;
 
 class ParticipantsController extends Controller
@@ -11,7 +12,8 @@ class ParticipantsController extends Controller
      */
     public function index()
     {
-        //
+        $participants = Presence::all();
+        return view('pages.participants.index', compact('participants'));
     }
 
     /**

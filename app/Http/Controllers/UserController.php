@@ -75,9 +75,9 @@ class UserController extends Controller
         $user->email = $request->email;
     
         // Définir le mot de passe par défaut
-        $user->password = bcrypt('Elbara2025'); // Mot de passe par défaut
+        $user->password = bcrypt('password'); // Mot de passe par défaut
         $user->phone_number = $request->phone_number;
-        $user->status = "actif";
+        $user->status = "Actif";
     
         // Ajouter le rôle
         $user->assignRole($request->role);
